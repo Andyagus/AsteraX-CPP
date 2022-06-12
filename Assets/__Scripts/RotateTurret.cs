@@ -4,20 +4,19 @@ using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
 
-public class RotateTurret : MonoBehaviour {
+public class RotateTurret : Singleton<RotateTurret> {
     public GameObject turret;
+
+    public Vector3 aimDirection; 
 
     
     private void Update()
     {
-        var mousePos = Camera.main.ScreenToWorldPoint(CrossPlatformInputManager.mousePosition);
-        Vector3 direction = (mousePos - transform.position).normalized * 100;
-
-        var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-        transform.rotation.= Quaternion.Euler(angle, Vector3.forward);
-        
-        Debug.DrawLine(this.gameObject.transform.position, mousePos, Color.red);
-        
+        var mousePos = ShipMovement.instance.mousePos;
+        aimDirection = (mousePos - transform.position).normalized;
+        float radian = Mathf.Atan2(aimDirection.x, aimDirection.y);
+        float angle = radian * Mathf.Rad2Deg;
+        turret.transform.eulerAngles = new Vector3(0, 0, -angle);
+        Debug.DrawLine(turret.transform.position, mousePos, new Color(Color.red.r, Color.red.g, Color.red.b, 0.3f));
     }
 }
