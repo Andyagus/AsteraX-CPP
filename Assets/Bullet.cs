@@ -13,19 +13,12 @@ public class Bullet : MonoBehaviour {
 
     private void Awake()
     {
-        ShipMovement.instance.OnShotFired += BulletInstatiated;
+        //ShipMovement.instance.OnShotFired += BulletInstatiated;
         bulletRb = gameObject.GetComponent<Rigidbody>();
         aimDirection = RotateTurret.instance.aimDirection;
         AddForceToBullet();
-
-
     }
 
-
-    private void BulletInstatiated()
-    {
-        Debug.Log("SHOT FIRED NEW BULLET");
-    }
 
     private void AddForceToBullet()
     {

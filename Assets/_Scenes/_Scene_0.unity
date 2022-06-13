@@ -126,7 +126,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 119978991}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d10d581c7e754abe9d5f1e7e04394af, type: 3}
+  m_Script: {fileID: 11500000, guid: 2ea58edabeee84b0ba7165af93e52778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   inputMagnitude: 7
@@ -307,6 +307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turret: {fileID: 247006201}
+  aimDirection: {x: 0, y: 0, z: 0}
 --- !u!1 &1854861993
 GameObject:
   m_ObjectHideFlags: 0
