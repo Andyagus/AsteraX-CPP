@@ -118,6 +118,19 @@ GameObject:
   m_PrefabParentObject: {fileID: 1664251521892296, guid: 2c350f2ea6d36435b8b50bf6e3c429cb,
     type: 2}
   m_PrefabInternal: {fileID: 2066196650}
+--- !u!114 &119978992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 119978991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03873ee7df279463da09a6c10ac7f31a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  degrees: 30
+  tiltTowards: 1
 --- !u!114 &119978995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,14 +139,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 119978991}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d10d581c7e754abe9d5f1e7e04394af, type: 3}
+  m_Script: {fileID: 11500000, guid: d4a5328f1ad974ca6882b49908706a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &247006201 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1957318569610646, guid: 2c350f2ea6d36435b8b50bf6e3c429cb,
-    type: 2}
-  m_PrefabInternal: {fileID: 2066196650}
+  shipSpeed: 150
 --- !u!1 &511746182
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,7 +306,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 049e3bfeb272d41279d61ecda6d0ebc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turret: {fileID: 247006201}
 --- !u!1 &1854861993
 GameObject:
   m_ObjectHideFlags: 0
