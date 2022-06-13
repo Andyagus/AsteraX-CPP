@@ -17,8 +17,21 @@ public class Bullet : MonoBehaviour {
         bulletRb = gameObject.GetComponent<Rigidbody>();
         aimDirection = RotateTurret.instance.aimDirection;
         AddForceToBullet();
-        StartCoroutine("DestroyBullet");
-        
+        StartCoroutine("DestroyBullet");        
+    }
+
+    private void Start()
+    {
+        if (GameObject.Find("Bullet Anchor"))
+        {
+            var bulletAnchor = GameObject.Find("Bullet Anchor");
+            this.transform.parent = bulletAnchor.transform;
+        }
+        else
+        {
+            var bulletAnchor = new GameObject("Bullet Anchor");
+            this.transform.parent = bulletAnchor.transform;
+        }
     }
 
     private void AddForceToBullet()
