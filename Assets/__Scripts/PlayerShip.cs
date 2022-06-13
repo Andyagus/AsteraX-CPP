@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerShip : MonoBehaviour { 
+
 	Transform ship;
 	float horizontalMovement;
 	float verticalMovement;
@@ -36,7 +37,7 @@ public class PlayerShip : MonoBehaviour {
 		verticalMovement = CrossPlatformInputManager.GetAxis("Vertical");
 		movementDirection = new Vector3(horizontalMovement, verticalMovement, 0);
 
-		if (Input.GetMouseButton(0))
+		if (CrossPlatformInputManager.GetAxis("Fire1") > 0) 
 		{
 			FireBullet();
 		}

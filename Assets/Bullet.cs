@@ -17,12 +17,19 @@ public class Bullet : MonoBehaviour {
         bulletRb = gameObject.GetComponent<Rigidbody>();
         aimDirection = RotateTurret.instance.aimDirection;
         AddForceToBullet();
+        StartCoroutine("DestroyBullet");
+        
     }
-
 
     private void AddForceToBullet()
     {
         bulletRb.AddForce(aimDirection * speed);
 
+    }
+
+    private IEnumerator DestroyBullet()
+    {
+        yield return new WaitForSeconds(2f);
+        Destroy(this.gameObject);
     }
 }
